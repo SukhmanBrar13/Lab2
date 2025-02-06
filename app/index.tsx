@@ -1,47 +1,27 @@
 import { View, Text, Button, StyleSheet } from "react-native";
+import { useRouter } from "expo-router";
 
-import fruits from "../components/FruitList";
-
-const Index = () => {
-  const handlePress = () => {
-    alert("Welcome to the app!");
-  };
+export default function Home() {
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>Welcome to the Lab 1 App!</Text>
-      <Button title="Click Me" onPress={handlePress} />
-      <Text style={styles.listHeader}>Fruit List:</Text>
-      {fruits.map((fruit, index) => (
-        <Text key={index} style={styles.listItem}>
-          {fruit}
-        </Text>
-      ))}
+      <Text style={styles.welcomeText}>Welcome to the Home Page</Text>
+      <Button title="Go to Lab 3" onPress={() => router.push("/lab_3")} />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#f8f8f8",
   },
   welcomeText: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
   },
-  listHeader: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginTop: 20,
-  },
-  listItem: {
-    fontSize: 16,
-    marginTop: 10,
-  },
 });
-
-export default Index;
