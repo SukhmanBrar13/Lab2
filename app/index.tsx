@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Welcome to the Home Page</Text>
-      <Button title="Go to Lab 3" onPress={() => router.push("/lab_3")} />
+      <Button title="Go to Lab 4" onPress={() => router.push("/lab4")} />  {/* ✅ Fixed Navigation */}
     </View>
   );
 }
