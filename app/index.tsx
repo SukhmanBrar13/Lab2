@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Welcome to the Home Page</Text>
-      <Button title="Go to Lab 4" onPress={() => router.push("/lab4")} />  
+      <Button title="Go to Lab 4" onPress={() => router.push("/lab4")} />
       <Button title="Go to Lab 5" onPress={() => router.push("/lab5")} />
+      <Button title="Go to Lab 6" onPress={() => router.push("/lab6")} />
     </View>
   );
 }
